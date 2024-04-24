@@ -12,9 +12,10 @@ FROM openjdk:17-jdk as builder
 WORKDIR /opt/app
 COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
-#RUN chmod +x ./mvnw dependency:go-offline
+RUN chmod +x mvnw
+RUN chmod +x ./mvnw dependency:go-offline
 COPY ./src ./src
-RUN chmod +x ./mvnw clean install -DskipTests
+RUN ./mvnw clean install -DskipTests
 
 FROM openjdk:17-jdk
 WORKDIR /opt/app
