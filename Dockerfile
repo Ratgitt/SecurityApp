@@ -14,7 +14,7 @@ COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
 #RUN chmod +x ./mvnw dependency:go-offline
 COPY ./src ./src
-RUN ./mvnw clean install -DskipTests
+RUN chmod +x ./mvnw clean install -DskipTests
 
 FROM openjdk:17-jdk
 WORKDIR /opt/app
