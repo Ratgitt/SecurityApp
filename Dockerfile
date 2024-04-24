@@ -12,7 +12,7 @@ FROM openjdk:17-jdk as builder
 WORKDIR /opt/app
 COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
-RUN chmod +x ./mvnw dependency:go-offline
+RUN chmod +x ./mvnw org.apache.maven.plugins:maven-dependency-plugin:3.1.2:go-offline
 COPY ./src ./src
 RUN ./mvnw clean install -DskipTests
 
