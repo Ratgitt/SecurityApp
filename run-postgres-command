@@ -1,0 +1,9 @@
+docker run `
+--name security-rat-postgres2 `
+-e POSTGRES_USER=postgres `
+-e POSTGRES_PASSWORD=ratsql `
+-e POSTGRES_DB=security_owasp_email `
+-p 5433:5432 `
+-v security_postgres:/var/lib/postgresql/data `
+-v ./init.sql:/docker-entrypoint-initdb.d/init.sql `
+postgres

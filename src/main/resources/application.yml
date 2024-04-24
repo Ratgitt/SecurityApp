@@ -1,0 +1,38 @@
+spring:
+    application:
+        name: SecurityOWASPWithEmailVerification
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        url: jdbc:postgresql://security-rat-postgres:5432/security_owasp_email
+#        url: jdbc:postgresql://localhost:5433/security_owasp_email
+        username: postgres
+        password: ratsql
+    jpa:
+        database: postgresql
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                format_sql: true
+        show-sql: true
+    mail:
+        host: smtp.gmail.com
+        username: ratmirvslvvslv@gmail.com
+        password: fmdy uknn jmfu gjup
+        port: 587
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    ssl:
+                        trust: smtp.gmail.com
+                    starttls:
+                        enable: true
+
+application:
+    security:
+        jwt:
+            expiration: 24
+            issuer: '"Ratmir"'
+            secret: '"ADBBEBA9901D38EC34CEBDB23DB6FCED0494A427CA1DC8929E1179229A0FBA3E"'

@@ -1,0 +1,4 @@
+docker run `
+--name spring-security-app2 `
+-p 8081:8080 `
+security-owasp-image

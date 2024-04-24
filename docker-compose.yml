@@ -1,0 +1,32 @@
+services:
+  postgres-db-service:
+    container_name: security-rat-postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ratsql
+      POSTGRES_DB: security_owasp_email
+    ports:
+      - "5433:5432"
+    volumes:
+      - security_postgres:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - spring-security-network
+
+  spring-service:
+    container_name: spring-security-app
+    image: security-owasp-image
+    ports:
+      - "8081:8080"
+    networks:
+      - spring-security-network
+    depends_on:
+      - postgres-db-service
+
+volumes:
+  security_postgres:
+
+networks:
+  spring-security-network:
+    driver: bridge
