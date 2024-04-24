@@ -4,9 +4,9 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     #        url: jdbc:postgresql://security-rat-postgres:5432/security_owasp_email
-    url: jdbc:postgresql://localhost:5433/security_owasp_email
-    username: username
-    password: password
+    url: #jdbc:postgresql://localhost:5433/security_owasp_email
+    username: #postgres
+    password: #ratsql
   jpa:
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
