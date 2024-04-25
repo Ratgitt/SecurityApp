@@ -3,10 +3,10 @@ spring:
     name: SecurityOWASPWithEmailVerification
   datasource:
     driver-class-name: org.postgresql.Driver
-    #        url: jdbc:postgresql://security-rat-postgres:5432/security_owasp_email
-    url: ${SPRING_DATASOURCE_URL} #jdbc:postgresql://localhost:5433/security_owasp_email
-    username: ${SPRING_DATASOURCE_USERNAME} #postgres
-    password: ${SPRING_DATASOURCE_PASSWORD} #ratsql
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+#   url: jdbc:postgresql://security-rat-postgres:5432/security_owasp_email
   jpa:
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect

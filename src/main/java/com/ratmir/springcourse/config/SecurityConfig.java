@@ -43,6 +43,7 @@ public class SecurityConfig {
                                         "/webjars/**",
                                         "/swagger-ui.html")
                                 .permitAll()
+                                .requestMatchers("/admin").hasRole("ADMIN")
                                 .anyRequest().hasAnyRole("USER", "ADMIN")
                 )
                 .sessionManagement(session -> session
