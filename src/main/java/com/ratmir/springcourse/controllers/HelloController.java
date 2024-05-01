@@ -23,6 +23,11 @@ public class HelloController {
 
     private final AdminService adminService;
 
+    @GetMapping("/message")
+    public ResponseEntity<String> sendMessage() {
+        return ResponseEntity.ok("Привет тупой артем");
+    }
+
     @GetMapping("/hello")
     public ResponseEntity<String> sayHello() {
         return ResponseEntity.ok("Hello from secured endpoint!");
