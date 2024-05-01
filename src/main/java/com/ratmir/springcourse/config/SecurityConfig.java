@@ -28,7 +28,6 @@ public class SecurityConfig {
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(requests -> requests
                                 .requestMatchers(
-                                        "/message",
                                         "/auth/login",
                                         "/error",
                                         "/auth/register",
