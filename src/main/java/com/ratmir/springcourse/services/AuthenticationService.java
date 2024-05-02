@@ -48,7 +48,7 @@ public class AuthenticationService {
 
         String message = String.format(
                 "Hello, %s! \n" +
-                        "Please, visit next link to activate you account: http://localhost/auth/activate/%s",
+                        "Please, visit next link to activate you account: https://monkfish-app-n9pmx.ondigitalocean.app/users/activate/%s",
                 person.getUsername(),
                 person.getActivationCode()
         );
