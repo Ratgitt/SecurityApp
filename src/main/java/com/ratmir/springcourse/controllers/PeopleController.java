@@ -24,10 +24,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/users")
-@SecurityRequirements({
-        @SecurityRequirement(name = "bearerToken"),
-        @SecurityRequirement(name = "cookie")
-})
+@SecurityRequirement(name = "Bearer Authentication")
 public class PeopleController {
 
     private final PeopleService peopleService;

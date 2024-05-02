@@ -15,10 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@SecurityRequirements({
-        @SecurityRequirement(name = "bearerToken"),
-        @SecurityRequirement(name = "cookie")
-})
+@SecurityRequirement(name = "Bearer Authentication")
 public class HelloController {
 
     private final AdminService adminService;

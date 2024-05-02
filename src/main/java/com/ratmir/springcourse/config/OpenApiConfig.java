@@ -29,46 +29,24 @@ import io.swagger.v3.oas.annotations.servers.Server;
         servers =  {
                 @Server(
                         description = "Local ENV",
-                        url = "http://localhost:8080"
+                        url = "https://monkfish-app-n9pmx.ondigitalocean.app"
                 ),
                 @Server(
                         description = "Production ENV",
-                        url = "http://localhost:8080/dev"
+                        url = "https://monkfish-app-n9pmx.ondigitalocean.app"
                 ),
         }
 )
 @SecuritySchemes(
         value = {
                 @SecurityScheme(
-                    name = "bearerAuth",
-                    description = "JWT auth description",
-                    scheme = "bearer",
-                    type = SecuritySchemeType.HTTP,
-                    bearerFormat = "JWT",
-                    in = SecuritySchemeIn.HEADER
-                ),
-                @SecurityScheme(
-                        name = "jwtCookieAuth",
-                        type = SecuritySchemeType.APIKEY,
-                        in = SecuritySchemeIn.COOKIE,
-                        paramName = "Authorization",
-                        description = "JWT Bearer Token (access_token) or session cookie"
+                        name = "Bearer Authentication",
+                        description = "JWT auth description",
+                        type = SecuritySchemeType.HTTP,
+                        bearerFormat = "JWT",
+                        scheme = "bearer"
                 )
         }
 )
-//@SecuritySchemes({
-//        @SecurityScheme(
-//                name = "bearerToken",
-//                type = SecuritySchemeType.HTTP,
-//                scheme = "bearer",
-//                bearerFormat = "JWT"
-//        ),
-//        @SecurityScheme(
-//                name = "cookie",
-//                type = SecuritySchemeType.APIKEY,
-//                in = SecuritySchemeIn.COOKIE,
-//                paramName = "__Secure-Fgp"
-//        )
-//})
 public class OpenApiConfig {
 }
