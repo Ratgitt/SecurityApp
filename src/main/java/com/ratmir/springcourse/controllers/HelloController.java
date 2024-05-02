@@ -38,7 +38,11 @@ public class HelloController {
         }
 
         System.out.println(personDetails.getPerson());
-        return ResponseEntity.ok(personDetails.getUsername());
+        return ResponseEntity.ok("{\n"
+                + "    username: " + personDetails.getUsername() + ",\n"
+                + "    yearOfBirth: " + personDetails.getPerson().getYearOfBirth() + ",\n"
+                + "    email: " + personDetails.getPerson().getEmail() + "\n"
+                + "}");
     }
 
     @GetMapping("/admin")
