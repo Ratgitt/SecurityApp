@@ -8,7 +8,6 @@ import com.ratmir.springcourse.util.responses.ActivationResponse;
 import com.ratmir.springcourse.util.responses.ChangePasswordResponse;
 import com.ratmir.springcourse.util.validators.ChangePasswordRequestValidator;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
-import io.swagger.v3.oas.annotations.security.SecurityRequirements;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
